@@ -36,11 +36,11 @@ Install simpleRESTDB yourself to contribute to the site and use it for your own 
 
 1. /get/all/ - No parameters needed. This simple GET request will send back all key/value pairs in the database. Example: `{key:value}`
 
-2. /get/ - Parameters in the form of {'key_of_object_to_get' : 'Key'} where 'key_of_object_to_get' is the key of the object desired to be returned and 'Key' is the string 'Key'. The reply will be the list of key/value pairs returned if successful and errors otherwise. Example: {'key_of_object_to_get':'value','key_of_second_object_to_get':'KeyNotFound'}
+2. /get/ - Parameters in the form of `{'key_of_object_to_get' : 'Key'}` where 'key_of_object_to_get' is the key of the object desired to be returned and 'Key' is the string 'Key'. The reply will be the list of key/value pairs returned if successful and errors otherwise. Example: `{'key_of_object_to_get':'value','key_of_second_object_to_get':'KeyNotFound'}`
 
-3. /update/ - Parameters in the form of {'key' : 'value'}. All parameters passed in will be updated accordingly. If a key/value pair does not already exist it will be created. Will return what is passed in unless failure. Example: {'key' : 'value', 'key2' : 'Error blah blah'}
+3. /update/ - Parameters in the form of `{'key' : 'value'}`. All parameters passed in will be updated accordingly. If a key/value pair does not already exist it will be created. Will return what is passed in unless failure. Example: `{'key' : 'value', 'key2' : 'Error blah blah'}`
 
-4. /delete/ - Parameters are in the same form as /get/ function. All key/value pairs sent in will be deleted by the key sent in with reply of Deleted or KeyNotFound for the corresponding action.
+4. /delete/ - Parameters are in the same form as /get/ function. All key/value pairs sent in will be deleted by the key sent in with reply of Deleted or KeyNotFound for the corresponding action. Example: `{'key_to_be_deleted' : 'Deleted', 'second_key_to_be_deleted' : 'KeyNotFound'}`
 
 * Note all parameters need to be json objects (simplet key/value pairs) and all replies will be of the same type.
 * The access_password variable in the settings file are to hide this functionality from only those who know it. This is simply done by requiring that the password be in front of all requests. For example to call the /get/all/ function, a user must instead call /password/get/all/.
