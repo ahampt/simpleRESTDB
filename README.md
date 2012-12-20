@@ -42,5 +42,5 @@ Install simpleRESTDB yourself to contribute to the site and use it for your own 
 
 4. /delete/ - Parameters are in the same form as /get/ function. All key/value pairs sent in will be deleted by the key sent in with reply of Deleted or KeyNotFound for the corresponding action. Example: `{'key_to_be_deleted' : 'Deleted', 'second_key_to_be_deleted' : 'KeyNotFound'}`
 
-* Note all parameters need to be json objects (simplet key/value pairs) and all replies will be of the same type.
+* Note all parameters and replies are json objects (simply a list of key/value pairs).
 * The access_password variable in the settings file are to hide this functionality from only those who know it. This is simply done by requiring that the password be in front of all requests. For example to call the /get/all/ function, a user must instead call /password/get/all/.
